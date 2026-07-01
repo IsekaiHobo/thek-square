@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="contact.title">Contact — The K-Square</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">THE K-SQUARE</a>
+    <ul class="nav__links">
+      <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
+      <li><a href="investing.html" data-i18n="nav.investing">Investing</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__lang" id="lang-toggle" type="button" aria-label="View in Korean" data-lang-next="ko">한국어</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="label reveal" data-i18n="contact.hero.eyebrow">Contact</span>
+      <h1 class="reveal reveal--stagger-1" data-i18n="contact.hero.title">Get in touch</h1>
+      <p class="lead reveal reveal--stagger-2" data-i18n="contact.hero.lead">Questions about The K-Square? Reach out and our team will follow up.</p>
+    </div>
+  </header>
+
+  <section class="section contact__layout">
+    <div class="container contact__grid">
+      <div class="reveal">
+        <!-- Formspree: replace REPLACE_WITH_FORM_ID with your form's ID (https://formspree.io). Until then, the form shows a local confirmation. -->
+        <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
+          <label><span data-i18n="form.name">Name</span><input type="text" name="name" required></label>
+          <label><span data-i18n="form.email">Email</span><input type="email" name="email" required></label>
+          <label><span data-i18n="form.phone">Phone</span><input type="tel" name="phone"></label>
+          <label><span data-i18n="form.message">Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn--primary" data-i18n="form.send.message">Send Message</button>
+        </form>
+        <p class="form-confirmation" hidden data-i18n="contact.confirm">Thanks for reaching out — we'll respond shortly.</p>
+      </div>
+      <div class="contact__details reveal reveal--stagger-1">
+        <span class="label" data-i18n="contact.visit">Visit Us</span>
+        <p data-i18n="contact.address">R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales, Philippines</p>
+        <span class="label" data-i18n="contact.contact">Contact</span>
+        <p data-i18n="contact.details">hello@thek-square.ph · +63 (placeholder)</p>
+        <div class="location__map">
+          <iframe
+            src="https://maps.google.com/maps?q=R7GJ%2BQXG+Magsaysay+Dr%2C+Olongapo+City%2C+Zambales&output=embed"
+            width="100%" height="300" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map of The K-Square location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><span class="nav__logo">THE K-SQUARE</span><p data-i18n="footer.address">Magsaysay Dr, Olongapo City, Zambales, Philippines</p></div>
+      <div><p data-i18n="footer.email">Email: hello@thek-square.ph</p><p data-i18n="footer.phone">Phone: +63 (placeholder)</p></div>
+      <div><a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br><a href="investing.html" data-i18n="nav.investing">Investing</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+    initForm('#contact-form');
+  </script>
+</body>
+</html>

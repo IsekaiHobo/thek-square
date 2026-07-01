@@ -1,0 +1,194 @@
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+  color: var(--color-paper);
+}
+.nav--solid {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: 0 1px 0 var(--color-line);
+}
+.nav__logo {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: inherit;
+}
+.nav__links { display: none; gap: var(--space-md); list-style: none; }
+.nav__links a {
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+}
+.nav__links a::after {
+  content: ""; position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 1px; background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+.nav__links a:hover::after { width: 100%; }
+.nav__toggle {
+  display: block; background: none; border: none;
+  color: inherit; font-size: 1.5rem; cursor: pointer;
+}
+@media (min-width: 769px) {
+  .nav__links { display: flex; }
+  .nav__toggle { display: none; }
+}
+.nav__actions { display: flex; align-items: center; gap: var(--space-sm); }
+.nav__lang {
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.nav__lang:hover { color: var(--color-accent); border-color: var(--color-accent); }
+.nav__links--open {
+  display: flex; position: absolute; top: 100%; left: 0; right: 0;
+  flex-direction: column; gap: var(--space-sm);
+  background: var(--color-ink); color: var(--color-paper);
+  padding: var(--space-md);
+}
+.nav__links--open a { color: var(--color-paper); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: none;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn--primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+.btn--primary:hover { background: var(--color-accent-deep); border-color: var(--color-accent-deep); }
+.btn--ghost {
+  background: transparent;
+  color: currentColor;
+  border-color: currentColor;
+}
+.btn--ghost:hover { color: var(--color-accent); border-color: var(--color-accent); }
+/* Text link with accent underline */
+.link-accent {
+  font-weight: 600; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+  border-bottom: 1px solid var(--color-accent); padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+.link-accent:hover { color: var(--color-accent-deep); }
+
+/* ---------- Generic card ---------- */
+.card {
+  background: var(--color-stone);
+  border: 1px solid var(--color-line);
+  padding: var(--space-md);
+}
+
+/* ---------- Plan card (architectural artifact) ---------- */
+.plan-card {
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.plan-card__figure {
+  background: #FBFAF6;            /* slightly warm white mat behind the CAD drawing */
+  border: 1px solid var(--color-line);
+  padding: var(--space-sm);
+}
+.plan-card__figure img {
+  width: 100%; height: auto;
+  mix-blend-mode: multiply;       /* lets the warm mat tint the white CAD background */
+}
+.plan-card__meta { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-sm); }
+.plan-card__area { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; color: var(--color-ink); }
+.plan-card__zone { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; }
+
+/* ---------- Stats strip ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+@media (min-width: 769px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.stats__num { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1; }
+.stats__label { display: block; margin-top: var(--space-xs); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-ink-muted); }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+.footer__grid { display: grid; gap: var(--space-md); grid-template-columns: 1fr; }
+@media (min-width: 769px) { .footer__grid { grid-template-columns: 2fr 1fr 1fr; } }
+.footer .nav__logo { color: var(--color-paper); font-size: 1.6rem; }
+.footer p, .footer a { color: var(--color-paper); opacity: 0.8; font-size: 0.9rem; }
+.footer a:hover { color: var(--color-accent); opacity: 1; }
+
+/* ---------- Forms ---------- */
+form label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+form input, form select, form textarea {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-xs);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+form input:focus, form select:focus, form textarea:focus {
+  outline: none; border-color: var(--color-accent);
+}
+form button[type="submit"] { margin-top: var(--space-sm); }
+.form-error { display: block; color: #9B2D2D; font-size: 0.8rem; margin-top: 0.25rem; letter-spacing: 0; text-transform: none; }
+.form-error--global { margin-top: var(--space-sm); font-size: 0.9rem; }
+.field--invalid { border-color: #9B2D2D !important; }
+.form-confirmation { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--color-ink); }

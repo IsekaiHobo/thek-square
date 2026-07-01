@@ -1,0 +1,21 @@
+:root {
+  /* Warm-neutral luxury palette */
+  --color-paper: #F4F1EA;       /* default light canvas (warm bone) */
+  --color-stone: #E7E1D6;       /* alt surface / banding / cards */
+  --color-ink: #1B1916;         /* primary text; deep cinematic sections */
+  --color-ink-muted: #6E685E;   /* secondary text, labels, captions */
+  --color-line: #D6CFC2;        /* hairline rules, borders */
+  --color-accent: #A98B68;      /* the only accent: clay/bronze */
+  --color-accent-deep: #8A6F50; /* accent hover/active */
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: clamp(5rem, 12vh, 10rem);  /* section rhythm */
+}

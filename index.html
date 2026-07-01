@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="home.title">The K-Square — Where Korea Comes Alive in Olongapo</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="nav__logo">THE K-SQUARE</span>
+    <ul class="nav__links">
+      <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
+      <li><a href="investing.html" data-i18n="nav.investing">Investing</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__lang" id="lang-toggle" type="button" aria-label="View in Korean" data-lang-next="ko">한국어</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img class="hero__media" src="assets/hero-render.png" alt="Architectural render of The K-Square building at dusk on Magsaysay Drive">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="label reveal" data-i18n="hero.eyebrow">Olongapo · Zambales · Pre-construction</span>
+      <h1 class="reveal reveal--stagger-1" data-i18n="hero.title">The K-Square</h1>
+      <p class="hero__tagline reveal reveal--stagger-2" data-i18n="hero.tagline">Where Korea comes alive in Olongapo — a four-floor destination for beauty, food, and entertainment.</p>
+      <a href="#vision" class="btn btn--ghost reveal reveal--stagger-3" data-i18n="hero.cta">Discover the Vision</a>
+    </div>
+    <div class="hero__scroll-cue" aria-hidden="true" data-i18n="hero.scroll">Scroll</div>
+  </section>
+
+  <section id="vision" class="section vision">
+    <div class="container vision__grid">
+      <div class="vision__text reveal">
+        <span class="label" data-i18n="vision.eyebrow">01 — The Vision</span>
+        <h2 data-i18n="vision.title">A new landmark for Olongapo</h2>
+        <p data-i18n="vision.body">The K-Square brings Korea's beauty, food, entertainment, and culture under one roof — a four-floor destination designed to anchor Magsaysay Drive. Currently in its concept and pre-construction phase, it is built on a vision shared between investors and brands ready to shape what comes next.</p>
+        <a href="leasing.html" class="link-accent" data-i18n="vision.link">Explore the floors</a>
+      </div>
+      <div class="vision__media reveal reveal--stagger-1">
+        <img src="assets/hero-render.png" alt="The K-Square exterior render">
+      </div>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-1f">
+    <div class="container floor__grid">
+      <div class="floor__text reveal">
+        <span class="numeral">01</span>
+        <span class="label" data-i18n="floor1.label">K-Fun &amp; Trend · 464 sqm</span>
+        <h2 data-i18n="floor1.title">K-Fun &amp; Trend Zone</h2>
+        <p class="floor__quote" data-i18n="floor1.quote">"An entrance anchor that draws foot traffic inside."</p>
+        <p data-i18n="floor1.body">K-Beauty Hub in the style of Olive Young, a sentimental K-Photo Studio, and K-Fun &amp; Acc — claw machines, premium goods, and character accessories.</p>
+      </div>
+      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
+        <img src="assets/floor-1f-interior.jpg" alt="Interior render of the K-Fun & Trend zone">
+        <span class="floor__media-cap" data-i18n="floor1.cap">K-Fun &amp; Trend</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-2f">
+    <div class="container floor__grid">
+      <div class="floor__text reveal">
+        <span class="numeral">02</span>
+        <span class="label" data-i18n="floor2.label">K-Beauty &amp; Wellness · 592 sqm</span>
+        <h2 data-i18n="floor2.title">K-Beauty &amp; Wellness Zone</h2>
+        <p class="floor__quote" data-i18n="floor2.quote">"A journey of the senses that awakens the whole body."</p>
+        <p data-i18n="floor2.body">Hair salon, nail art, massage, Atomy Center, beauty booths, Korean Daiso, and parcel delivery — an immersive space for Korea's finest beauty and healthcare.</p>
+      </div>
+      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
+        <img src="assets/floor-2f-interior.jpg" alt="Interior render of the K-Beauty & Wellness zone">
+        <span class="floor__media-cap" data-i18n="floor2.cap">K-Beauty &amp; Wellness</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-3f">
+    <div class="container floor__grid">
+      <div class="floor__text reveal">
+        <span class="numeral">03</span>
+        <span class="label" data-i18n="floor3.label">K-Food &amp; Drama · 595 sqm</span>
+        <h2 data-i18n="floor3.title">K-Food &amp; Drama Zone</h2>
+        <p class="floor__quote" data-i18n="floor3.quote">"The moment you become the protagonist of a drama."</p>
+        <p data-i18n="floor3.body">A food court spanning Chinese, Japanese, Ramyun, Chicken, Bibimbap, Hansik, Samgyupsal, and Jjigae stalls, plus a beverage bar — gourmet cuisine in K-drama-inspired scenery.</p>
+      </div>
+      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
+        <img src="assets/floor-3f-interior.jpg" alt="Interior render of the K-Food & Drama zone">
+        <span class="floor__media-cap" data-i18n="floor3.cap">K-Food &amp; Drama</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-4f">
+    <div class="container floor__grid">
+      <div class="floor__text reveal">
+        <span class="numeral">04</span>
+        <span class="label" data-i18n="floor4.label">K-Pop Entertain · 498 sqm</span>
+        <h2 data-i18n="floor4.title">K-Pop Entertain Zone</h2>
+        <p class="floor__quote" data-i18n="floor4.quote">"A stage where the whole family become the stars."</p>
+        <p data-i18n="floor4.body">Hope Partners Association offices, Korean Family KTV karaoke rooms, and a Celebrities Lounge with bar area and roof-deck access.</p>
+      </div>
+      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
+        <img src="assets/floor-4f-interior.jpg" alt="Interior render of the K-Pop Entertain zone">
+        <span class="floor__media-cap" data-i18n="floor4.cap">K-Pop Entertain</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section fork">
+    <div class="container fork__grid">
+      <div class="fork__card reveal">
+        <span class="label" data-i18n="fork.brands.eyebrow">For Brands</span>
+        <h3 data-i18n="fork.brands.title">Bring your brand to life</h3>
+        <p data-i18n="fork.brands.body">Lease retail, beauty, food, or entertainment space across four themed floors built to draw foot traffic from day one.</p>
+        <a href="leasing.html" class="link-accent" data-i18n="fork.brands.link">Explore Leasing</a>
+      </div>
+      <div class="fork__card reveal reveal--stagger-1">
+        <span class="label" data-i18n="fork.investors.eyebrow">For Investors</span>
+        <h3 data-i18n="fork.investors.title">Be part of the vision</h3>
+        <p data-i18n="fork.investors.body">Join a ground-floor investment opportunity in Olongapo's first dedicated K-culture destination.</p>
+        <a href="investing.html" class="link-accent" data-i18n="fork.investors.link">Explore Investing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stats reveal">
+        <div class="stats__item"><span class="stats__num">4</span><span class="stats__label" data-i18n="stats.floors">Themed Floors</span></div>
+        <div class="stats__item"><span class="stats__num">2,148</span><span class="stats__label" data-i18n="stats.sqm">Total sqm</span></div>
+        <div class="stats__item"><span class="stats__num" data-i18n="stats.phase.num">Phase 1</span><span class="stats__label" data-i18n="stats.phase.label">Pre-construction</span></div>
+        <div class="stats__item"><span class="stats__num" data-i18n="stats.place.num">Olongapo</span><span class="stats__label" data-i18n="stats.place.label">Magsaysay Drive</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section location">
+    <div class="container">
+      <h2 class="reveal" data-i18n="location.title">Find Us</h2>
+      <p class="reveal reveal--stagger-1" data-i18n="location.address">R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales, Philippines</p>
+      <div class="location__map reveal reveal--stagger-2">
+        <iframe
+          src="https://maps.google.com/maps?q=R7GJ%2BQXG+Magsaysay+Dr%2C+Olongapo+City%2C+Zambales&output=embed"
+          width="100%" height="400" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map of The K-Square location"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <span class="nav__logo">THE K-SQUARE</span>
+        <p data-i18n="footer.address">Magsaysay Dr, Olongapo City, Zambales, Philippines</p>
+      </div>
+      <div>
+        <p data-i18n="footer.email">Email: hello@thek-square.ph</p>
+        <p data-i18n="footer.phone">Phone: +63 (placeholder)</p>
+      </div>
+      <div>
+        <a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br>
+        <a href="investing.html" data-i18n="nav.investing">Investing</a><br>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/media-fallback.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+  </script>
+</body>
+</html>

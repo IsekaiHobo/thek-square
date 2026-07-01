@@ -1,0 +1,15 @@
+.page-hero {
+  padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
+  background: var(--color-stone);
+  border-bottom: 1px solid var(--color-line);
+}
+.page-hero h1 { margin: var(--space-xs) 0 var(--space-sm); }
+
+.contact__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: start; }
+@media (min-width: 769px) { .contact__grid { grid-template-columns: 1.2fr 1fr; } }
+
+.contact__details .label { margin-top: var(--space-md); }
+.contact__details .label:first-child { margin-top: 0; }
+.location__map { margin-top: var(--space-md); border: 1px solid var(--color-line); }
+.location__map iframe { display: block; width: 100%; }
+.form-confirmation { margin-top: var(--space-md); }

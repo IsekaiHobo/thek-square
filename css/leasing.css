@@ -1,0 +1,21 @@
+.page-hero {
+  padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
+  background: var(--color-stone);
+  border-bottom: 1px solid var(--color-line);
+}
+.page-hero h1 { margin: var(--space-xs) 0 var(--space-sm); }
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+@media (min-width: 769px) { .plans__grid { grid-template-columns: 1fr 1fr; } }
+
+.plan-card p { font-size: 0.95rem; color: var(--color-ink-muted); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+
+.inquiry { background: var(--color-stone); border-top: 1px solid var(--color-line); }
+.inquiry form { max-width: 640px; margin-top: var(--space-md); }

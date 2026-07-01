@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="investing.title">Investing — The K-Square</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/investing.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">THE K-SQUARE</a>
+    <ul class="nav__links">
+      <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
+      <li><a href="investing.html" data-i18n="nav.investing">Investing</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__lang" id="lang-toggle" type="button" aria-label="View in Korean" data-lang-next="ko">한국어</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="label reveal" data-i18n="investing.hero.eyebrow">Investing</span>
+      <h1 class="reveal reveal--stagger-1" data-i18n="investing.hero.title">Invest in Olongapo's K-culture landmark</h1>
+      <p class="lead reveal reveal--stagger-2" data-i18n="investing.hero.lead">A four-floor destination at the concept stage, ready for founding partners.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container opportunity__grid">
+      <div class="reveal">
+        <span class="label" data-i18n="investing.opp.eyebrow">01 — The Opportunity</span>
+        <h2 data-i18n="investing.opp.title">A ground-up K-culture destination</h2>
+        <p data-i18n="investing.opp.body">The K-Square is a commercial development at R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales — bringing Korean retail, beauty, food, and entertainment under one roof. In its concept and pre-construction phase, it gives early investors the chance to shape the project from the ground floor up.</p>
+      </div>
+      <div class="opportunity__media reveal reveal--stagger-1">
+        <img src="assets/hero-render.png" alt="The K-Square exterior render">
+      </div>
+    </div>
+  </section>
+
+  <section class="section snapshot">
+    <div class="container">
+      <h2 class="reveal" data-i18n="investing.snapshot.title">Development Snapshot</h2>
+      <div class="stats reveal">
+        <div class="stats__item"><span class="stats__num">4</span><span class="stats__label" data-i18n="investing.stats.floors">Revenue Floors</span></div>
+        <div class="stats__item"><span class="stats__num">2,148</span><span class="stats__label" data-i18n="stats.sqm">Total sqm</span></div>
+        <div class="stats__item"><span class="stats__num" data-i18n="stats.phase.num">Phase 1</span><span class="stats__label" data-i18n="investing.stats.phase.label">Concept Stage</span></div>
+        <div class="stats__item"><span class="stats__num" data-i18n="stats.place.num">Olongapo</span><span class="stats__label" data-i18n="stats.place.label">Magsaysay Drive</span></div>
+      </div>
+      <div class="cta-row reveal">
+        <a href="assets/k-square-brochure.pdf" class="btn btn--primary" download data-i18n="cta.brochure">Download Brochure</a>
+        <a href="#book-consultation" class="btn btn--ghost" data-i18n="cta.consult">Book a Consultation</a>
+        <!-- PLACEHOLDER: replace #book-consultation with a real scheduling embed link (e.g. Calendly) once available -->
+      </div>
+    </div>
+  </section>
+
+  <section id="inquiry" class="section inquiry">
+    <div class="container">
+      <h2 class="reveal" data-i18n="investing.inquiry.title">Inquire About Investing</h2>
+      <!-- Formspree: replace REPLACE_WITH_FORM_ID with your form's ID (https://formspree.io). Until then, the form shows a local confirmation. -->
+      <form id="investing-form" class="reveal reveal--stagger-1" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
+        <label><span data-i18n="form.name">Name</span><input type="text" name="name" required></label>
+        <label><span data-i18n="form.organization">Organization</span><input type="text" name="organization" required></label>
+        <label><span data-i18n="form.email">Email</span><input type="email" name="email" required></label>
+        <label><span data-i18n="form.phone">Phone</span><input type="tel" name="phone"></label>
+        <label><span data-i18n="form.interest">Investment Interest</span>
+          <select name="interest" required>
+            <option value="" data-i18n="form.interest.select">Select an area of interest</option>
+            <option value="equity" data-i18n="form.interest.equity">Equity Investment</option>
+            <option value="anchor-tenant" data-i18n="form.interest.anchor">Anchor Tenant Partnership</option>
+            <option value="other" data-i18n="form.interest.other">Other</option>
+          </select>
+        </label>
+        <label><span data-i18n="form.message">Message</span><textarea name="message" rows="4"></textarea></label>
+        <button type="submit" class="btn btn--primary" data-i18n="form.send.inquiry">Send Inquiry</button>
+      </form>
+      <p class="form-confirmation" hidden data-i18n="investing.confirm">Thanks — our investment team will reach out shortly.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><span class="nav__logo">THE K-SQUARE</span><p data-i18n="footer.address">Magsaysay Dr, Olongapo City, Zambales, Philippines</p></div>
+      <div><p data-i18n="footer.email">Email: hello@thek-square.ph</p><p data-i18n="footer.phone">Phone: +63 (placeholder)</p></div>
+      <div><a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br><a href="investing.html" data-i18n="nav.investing">Investing</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+    initForm('#investing-form');
+  </script>
+</body>
+</html>

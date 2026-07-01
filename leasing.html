@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="leasing.title">Leasing — The K-Square</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/leasing.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">THE K-SQUARE</a>
+    <ul class="nav__links">
+      <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
+      <li><a href="investing.html" data-i18n="nav.investing">Investing</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__lang" id="lang-toggle" type="button" aria-label="View in Korean" data-lang-next="ko">한국어</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="label reveal" data-i18n="leasing.hero.eyebrow">Leasing</span>
+      <h1 class="reveal reveal--stagger-1" data-i18n="leasing.hero.title">Bring your brand to The K-Square</h1>
+      <p class="lead reveal reveal--stagger-2" data-i18n="leasing.hero.lead">Four themed floors. One destination built to draw foot traffic from day one.</p>
+    </div>
+  </header>
+
+  <section id="floor-plans" class="section">
+    <div class="container">
+      <span class="label reveal" data-i18n="leasing.floors.eyebrow">02 — The Floors</span>
+      <h2 class="reveal" data-i18n="leasing.floors.title">Available spaces, by floor</h2>
+      <p class="lead reveal reveal--stagger-1" data-i18n="leasing.floors.lead">Real architectural plans for each level. Inquire about anchor and in-line positions.</p>
+
+      <div class="plans__grid">
+        <article class="plan-card reveal">
+          <div class="plan-card__figure"><img src="assets/floor-1f-ground.jpg" alt="Ground floor plan, 464.13 square meters"></div>
+          <div class="plan-card__meta"><span class="plan-card__zone" data-i18n="plan1.zone">1F · K-Fun &amp; Trend</span><span class="plan-card__area" data-i18n="plan1.area">464 sqm</span></div>
+          <p data-i18n="plan1.body">K-Beauty Hub, K-Photo Studio, and K-Fun &amp; Acc. The entrance anchor that pulls foot traffic inside.</p>
+          <a href="#inquiry" class="link-accent" data-i18n="plan1.cta">Inquire about 1F</a>
+        </article>
+        <article class="plan-card reveal reveal--stagger-1">
+          <div class="plan-card__figure"><img src="assets/floor-2f.jpg" alt="Second floor plan, 591.54 square meters"></div>
+          <div class="plan-card__meta"><span class="plan-card__zone" data-i18n="plan2.zone">2F · K-Beauty &amp; Wellness</span><span class="plan-card__area" data-i18n="plan2.area">592 sqm</span></div>
+          <p data-i18n="plan2.body">Salon, nail art, massage, Atomy Center, beauty booths, Korean Daiso, and parcel service.</p>
+          <a href="#inquiry" class="link-accent" data-i18n="plan2.cta">Inquire about 2F</a>
+        </article>
+        <article class="plan-card reveal reveal--stagger-2">
+          <div class="plan-card__figure"><img src="assets/floor-3f.jpg" alt="Third floor plan, 594.63 square meters"></div>
+          <div class="plan-card__meta"><span class="plan-card__zone" data-i18n="plan3.zone">3F · K-Food &amp; Drama</span><span class="plan-card__area" data-i18n="plan3.area">595 sqm</span></div>
+          <p data-i18n="plan3.body">A multi-stall Korean food court plus beverage bar in K-drama-inspired scenery.</p>
+          <a href="#inquiry" class="link-accent" data-i18n="plan3.cta">Inquire about 3F</a>
+        </article>
+        <article class="plan-card reveal reveal--stagger-3">
+          <div class="plan-card__figure"><img src="assets/floor-4f-roofdeck.jpg" alt="Roof deck plan, 497.95 square meters"></div>
+          <div class="plan-card__meta"><span class="plan-card__zone" data-i18n="plan4.zone">4F · K-Pop Entertain</span><span class="plan-card__area" data-i18n="plan4.area">498 sqm</span></div>
+          <p data-i18n="plan4.body">Offices, Korean Family KTV, and a Celebrities Lounge with bar area and roof-deck access.</p>
+          <a href="#inquiry" class="link-accent" data-i18n="plan4.cta">Inquire about 4F</a>
+        </article>
+      </div>
+
+      <div class="cta-row reveal">
+        <a href="assets/k-square-brochure.pdf" class="btn btn--primary" download data-i18n="cta.brochure">Download Brochure</a>
+        <a href="#book-consultation" class="btn btn--ghost" data-i18n="cta.consult">Book a Consultation</a>
+        <!-- PLACEHOLDER: replace #book-consultation with a real scheduling embed link (e.g. Calendly) once available -->
+      </div>
+    </div>
+  </section>
+
+  <section id="inquiry" class="section inquiry">
+    <div class="container">
+      <h2 class="reveal" data-i18n="leasing.inquiry.title">Inquire About Leasing</h2>
+      <!-- Formspree: replace REPLACE_WITH_FORM_ID with your form's ID (https://formspree.io). Until then, the form shows a local confirmation. -->
+      <form id="leasing-form" class="reveal reveal--stagger-1" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
+        <label><span data-i18n="form.name">Name</span><input type="text" name="name" required></label>
+        <label><span data-i18n="form.company">Company / Brand</span><input type="text" name="company" required></label>
+        <label><span data-i18n="form.email">Email</span><input type="email" name="email" required></label>
+        <label><span data-i18n="form.phone">Phone</span><input type="tel" name="phone"></label>
+        <label><span data-i18n="form.floor">Preferred Floor</span>
+          <select name="floor" required>
+            <option value="" data-i18n="form.floor.select">Select a floor</option>
+            <option value="1f" data-i18n="form.floor.1f">1F — K-Fun &amp; Trend Zone</option>
+            <option value="2f" data-i18n="form.floor.2f">2F — K-Beauty &amp; Wellness Zone</option>
+            <option value="3f" data-i18n="form.floor.3f">3F — K-Food &amp; Drama Zone</option>
+            <option value="4f" data-i18n="form.floor.4f">4F — K-Pop Entertain Zone</option>
+          </select>
+        </label>
+        <label><span data-i18n="form.message">Message</span><textarea name="message" rows="4"></textarea></label>
+        <button type="submit" class="btn btn--primary" data-i18n="form.send.inquiry">Send Inquiry</button>
+      </form>
+      <p class="form-confirmation" hidden data-i18n="leasing.confirm">Thanks — our leasing team will reach out shortly.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><span class="nav__logo">THE K-SQUARE</span><p data-i18n="footer.address">Magsaysay Dr, Olongapo City, Zambales, Philippines</p></div>
+      <div><p data-i18n="footer.email">Email: hello@thek-square.ph</p><p data-i18n="footer.phone">Phone: +63 (placeholder)</p></div>
+      <div><a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br><a href="investing.html" data-i18n="nav.investing">Investing</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+    initForm('#leasing-form');
+  </script>
+</body>
+</html>
