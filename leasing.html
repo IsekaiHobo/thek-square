@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap">
-  <title data-i18n="leasing.title">Leasing — The K-Square</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="leasing.title">Leasing: The K-Square</title>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <nav class="nav nav--static">
     <a href="index.html" class="nav__logo">THE K-SQUARE</a>
     <ul class="nav__links">
       <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
@@ -30,7 +30,7 @@
 
   <header class="page-hero">
     <div class="container">
-      <span class="label reveal" data-i18n="leasing.hero.eyebrow">Leasing</span>
+      <span class="badge reveal" data-i18n="leasing.hero.eyebrow">Leasing</span>
       <h1 class="reveal reveal--stagger-1" data-i18n="leasing.hero.title">Bring your brand to The K-Square</h1>
       <p class="lead reveal reveal--stagger-2" data-i18n="leasing.hero.lead">Four themed floors. One destination built to draw foot traffic from day one.</p>
     </div>
@@ -38,7 +38,6 @@
 
   <section id="floor-plans" class="section">
     <div class="container">
-      <span class="label reveal" data-i18n="leasing.floors.eyebrow">02 — The Floors</span>
       <h2 class="reveal" data-i18n="leasing.floors.title">Available spaces, by floor</h2>
       <p class="lead reveal reveal--stagger-1" data-i18n="leasing.floors.lead">Real architectural plans for each level. Inquire about anchor and in-line positions.</p>
 
@@ -68,6 +67,48 @@
           <a href="#inquiry" class="link-accent" data-i18n="plan4.cta">Inquire about 4F</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section tenant-fit">
+    <div class="container">
+      <h2 class="reveal" data-i18n="leasing.fit.title">Who we're building for</h2>
+      <p class="lead reveal reveal--stagger-1" data-i18n="leasing.fit.lead">The K-Square is curated by category, not filled at random. We're in conversation with brands across four sectors.</p>
+      <div class="tag-row reveal reveal--stagger-2">
+        <span class="badge" data-i18n="leasing.fit.tag1">K-Beauty &amp; Skincare</span>
+        <span class="badge" data-i18n="leasing.fit.tag2">Wellness &amp; Salon</span>
+        <span class="badge" data-i18n="leasing.fit.tag3">Food &amp; Beverage</span>
+        <span class="badge" data-i18n="leasing.fit.tag4">Entertainment &amp; Lifestyle</span>
+        <span class="badge" data-i18n="leasing.fit.tag5">Retail &amp; Character Goods</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-it-works">
+    <div class="container">
+      <h2 class="reveal" data-i18n="leasing.how.title">How leasing works</h2>
+      <div class="timeline">
+        <div class="timeline__step timeline__step--active">
+          <span class="timeline__mark">01</span>
+          <h3 data-i18n="leasing.how1.title">Inquiry</h3>
+          <p data-i18n="leasing.how1.body">Tell us your brand and preferred floor. Our leasing team reviews fit within days.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__mark">02</span>
+          <h3 data-i18n="leasing.how2.title">Site Visit</h3>
+          <p data-i18n="leasing.how2.body">Walk the plans on site and discuss unit size, frontage, and build-out needs.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__mark">03</span>
+          <h3 data-i18n="leasing.how3.title">Letter of Intent</h3>
+          <p data-i18n="leasing.how3.body">Terms are set out in writing ahead of a formal lease agreement.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__mark">04</span>
+          <h3 data-i18n="leasing.how4.title">Fit-Out &amp; Launch</h3>
+          <p data-i18n="leasing.how4.body">Build your space alongside the development timeline and open with the destination.</p>
+        </div>
+      </div>
 
       <div class="cta-row reveal">
         <a href="assets/k-square-brochure.pdf" class="btn btn--primary" download data-i18n="cta.brochure">Download Brochure</a>
@@ -89,16 +130,16 @@
         <label><span data-i18n="form.floor">Preferred Floor</span>
           <select name="floor" required>
             <option value="" data-i18n="form.floor.select">Select a floor</option>
-            <option value="1f" data-i18n="form.floor.1f">1F — K-Fun &amp; Trend Zone</option>
-            <option value="2f" data-i18n="form.floor.2f">2F — K-Beauty &amp; Wellness Zone</option>
-            <option value="3f" data-i18n="form.floor.3f">3F — K-Food &amp; Drama Zone</option>
-            <option value="4f" data-i18n="form.floor.4f">4F — K-Pop Entertain Zone</option>
+            <option value="1f" data-i18n="form.floor.1f">1F, K-Fun &amp; Trend Zone</option>
+            <option value="2f" data-i18n="form.floor.2f">2F, K-Beauty &amp; Wellness Zone</option>
+            <option value="3f" data-i18n="form.floor.3f">3F, K-Food &amp; Drama Zone</option>
+            <option value="4f" data-i18n="form.floor.4f">4F, K-Pop Entertain Zone</option>
           </select>
         </label>
         <label><span data-i18n="form.message">Message</span><textarea name="message" rows="4"></textarea></label>
         <button type="submit" class="btn btn--primary" data-i18n="form.send.inquiry">Send Inquiry</button>
       </form>
-      <p class="form-confirmation" hidden data-i18n="leasing.confirm">Thanks — our leasing team will reach out shortly.</p>
+      <p class="form-confirmation" hidden data-i18n="leasing.confirm">Thanks, our leasing team will reach out shortly.</p>
     </div>
   </section>
 

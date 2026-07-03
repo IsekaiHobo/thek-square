@@ -15,7 +15,7 @@
 }
 .hero__overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to top, rgba(20,20,18,0.85) 0%, rgba(20,20,18,0.25) 45%, rgba(20,20,18,0.15) 100%);
+  background: linear-gradient(to top, rgba(15,14,12,0.88) 0%, rgba(15,14,12,0.3) 45%, rgba(15,14,12,0.12) 100%);
 }
 .hero__content {
   position: relative; z-index: 2;
@@ -23,23 +23,22 @@
   padding: 0 var(--space-md) clamp(3rem, 8vh, 6rem);
   max-width: 1180px; margin: 0 auto; width: 100%;
 }
-.hero__content .label { color: var(--color-paper); }
-.hero__content .label:not(.reveal),
-.hero__content .label.reveal--visible { opacity: 0.85; }
-.hero__content h1 { color: var(--color-paper); margin: var(--space-xs) 0 var(--space-sm); }
+.hero__badge {
+  color: var(--color-paper);
+  border-color: rgba(236,238,236,0.55);
+}
+.hero__badge:not(.reveal),
+.hero__badge.reveal--visible { opacity: 0.95; }
+.hero__content h1 { color: var(--color-paper); margin: var(--space-sm) 0 var(--space-sm); }
 .hero__tagline { color: var(--color-paper); max-width: 46ch; margin-bottom: var(--space-md); }
 .hero__tagline:not(.reveal),
 .hero__tagline.reveal--visible { opacity: 0.9; }
-.hero__content .btn--ghost { color: var(--color-paper); border-color: rgba(244,241,234,0.6); }
+.hero__content .btn--ghost { color: var(--color-paper); border-color: rgba(236,238,236,0.6); }
 .hero__content .btn--ghost:hover { color: var(--color-accent); border-color: var(--color-accent); }
-.hero__scroll-cue {
-  position: absolute; bottom: var(--space-md); right: var(--space-md); z-index: 2;
-  color: var(--color-paper); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7;
-}
 
 /* ---------- Vision ---------- */
 .vision__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: stretch; }
-@media (min-width: 769px) { .vision__grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 769px) { .vision__grid { grid-template-columns: 1.1fr 0.9fr; } }
 .vision__text .link-accent { margin-top: var(--space-sm); display: inline-block; }
 .vision__media { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
 .vision__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -57,7 +56,8 @@
 /* Keep the text content vertically centered within its (stretched) column */
 .floor__text { display: flex; flex-direction: column; justify-content: center; }
 .floor__text .numeral { display: block; margin-bottom: var(--space-xs); }
-.floor__quote { font-family: var(--font-display); font-style: italic; font-size: clamp(1.2rem, 2vw, 1.6rem); color: var(--color-ink-muted); margin: var(--space-sm) 0; max-width: 40ch; }
+.floor__meta { font-size: 0.85rem; font-weight: 600; color: var(--color-ink-muted); margin-bottom: 0.3rem; }
+.floor__quote { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.15rem, 1.9vw, 1.5rem); color: var(--color-ink-muted); margin: var(--space-sm) 0; max-width: 40ch; }
 /* Photographic interior render, cinematic framing */
 .floor__media {
   display: block; position: relative; overflow: hidden;
@@ -76,17 +76,18 @@
 .floor__media-cap {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
   padding: var(--space-md) var(--space-sm) var(--space-sm);
-  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--color-paper);
-  background: linear-gradient(to top, rgba(20,20,18,0.78) 0%, rgba(20,20,18,0) 100%);
+  background: linear-gradient(to top, rgba(15,14,12,0.8) 0%, rgba(15,14,12,0) 100%);
 }
 @media (prefers-reduced-motion: reduce) { .floor__media:hover img { transform: none; } }
 
 /* ---------- Fork ---------- */
+.fork h2 { max-width: 20ch; margin-bottom: var(--space-lg); }
 .fork__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
 @media (min-width: 769px) { .fork__grid { grid-template-columns: 1fr 1fr; } }
 .fork__card { background: var(--color-stone); border: 1px solid var(--color-line); padding: var(--space-lg); }
-.fork__card h3 { margin: var(--space-xs) 0 var(--space-sm); }
+.fork__card h3 { margin: 0 0 var(--space-sm); }
 .fork__card .link-accent { margin-top: var(--space-sm); display: inline-block; }
 
 /* ---------- Location ---------- */

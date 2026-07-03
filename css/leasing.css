@@ -15,6 +15,14 @@
 
 .plan-card p { font-size: 0.95rem; color: var(--color-ink-muted); }
 
+/* ---------- Tenant fit (category tags) ---------- */
+.tenant-fit { background: var(--color-stone); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
+.tenant-fit .lead { max-width: 56ch; margin-bottom: var(--space-md); }
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.tag-row .badge { color: var(--color-ink); border-color: var(--color-line); background: var(--color-paper); }
+
+.how-it-works { background: var(--color-paper); }
+
 .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
 
 .inquiry { background: var(--color-stone); border-top: 1px solid var(--color-line); }

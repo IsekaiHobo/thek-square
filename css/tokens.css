@@ -1,15 +1,17 @@
 :root {
-  /* Warm-neutral luxury palette */
-  --color-paper: #F4F1EA;       /* default light canvas (warm bone) */
-  --color-stone: #E7E1D6;       /* alt surface / banding / cards */
-  --color-ink: #1B1916;         /* primary text; deep cinematic sections */
-  --color-ink-muted: #6E685E;   /* secondary text, labels, captions */
-  --color-line: #D6CFC2;        /* hairline rules, borders */
-  --color-accent: #A98B68;      /* the only accent: clay/bronze */
-  --color-accent-deep: #8A6F50; /* accent hover/active */
+  /* Terracotta + Slate — cool neutral field, warm rust accent (harmonizes with
+     the walnut/clay interior photography without reaching for beige+brass). */
+  --color-paper: #ECEEEC;       /* default light canvas (cool slate-white) */
+  --color-stone: #DEE1DD;       /* alt surface / banding / cards */
+  --color-ink: #17140F;         /* primary text; deep cinematic sections */
+  --color-ink-muted: #666B64;   /* secondary text, labels, captions */
+  --color-line: #CBD0CA;        /* hairline rules, borders */
+  --color-accent: #B65A31;      /* the only accent: terracotta rust */
+  --color-accent-deep: #8F4322; /* accent hover/active */
 
   /* Typography */
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-display: "Bricolage Grotesque", "Manrope", -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif; /* reserved: pull-quotes only */
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing scale */
@@ -18,4 +20,8 @@
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: clamp(5rem, 12vh, 10rem);  /* section rhythm */
+
+  /* Shape (locked: sharp corners throughout, no rounded cards) */
+  --radius: 0;
+  --radius-pill: 999px; /* interactive pills/badges only */
 }
