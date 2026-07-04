@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
   <title data-i18n="home.title">The K-Square: Where Korea Comes Alive in Olongapo</title>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
@@ -29,7 +29,7 @@
   </nav>
 
   <section class="hero">
-    <img class="hero__media" src="assets/hero-render.png" alt="Architectural render of The K-Square building at dusk on Magsaysay Drive">
+    <img class="hero__media" src="assets/hero-night.jpg" alt="Architectural render of The K-Square building at night on Magsaysay Drive">
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <span class="badge hero__badge reveal" data-i18n="hero.eyebrow">Pre-Construction · Olongapo</span>
@@ -52,67 +52,45 @@
     </div>
   </section>
 
-  <section class="floor" id="floor-1f">
-    <div class="container floor__grid">
-      <div class="floor__text reveal">
-        <span class="numeral">01</span>
-        <span class="floor__meta" data-i18n="floor1.label">K-Fun &amp; Trend · 464 sqm</span>
-        <h2 data-i18n="floor1.title">K-Fun &amp; Trend Zone</h2>
-        <p class="floor__quote" data-i18n="floor1.quote">"An entrance anchor that draws foot traffic inside."</p>
-        <p data-i18n="floor1.body">K-Beauty Hub in the style of Olive Young, a sentimental K-Photo Studio, and K-Fun &amp; Acc: claw machines, premium goods, and character accessories.</p>
-      </div>
-      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
-        <img src="assets/floor-1f-interior.jpg" alt="Interior render of the K-Fun & Trend zone">
-        <span class="floor__media-cap" data-i18n="floor1.cap">K-Fun &amp; Trend</span>
-      </a>
-    </div>
-  </section>
+  <section class="section floors" id="floors">
+    <div class="container">
+      <div class="floors__slider reveal" role="list">
+        <a class="floor-panel is-open" id="floor-1f" role="listitem" href="leasing.html#floor-plans">
+          <img class="floor-panel__img" src="assets/floor-1f-interior.jpg" alt="Interior render of the K-Fun & Trend zone" loading="lazy">
+          <span class="floor-panel__index numeral">01</span>
+          <span class="floor-panel__spine"><span data-i18n="floor1.cap">K-Fun &amp; Trend</span></span>
+          <div class="floor-panel__reveal">
+            <h2 data-i18n="floor1.title">K-Fun &amp; Trend Zone</h2>
+          </div>
+        </a>
 
-  <section class="floor" id="floor-2f">
-    <div class="container floor__grid">
-      <div class="floor__text reveal">
-        <span class="numeral">02</span>
-        <span class="floor__meta" data-i18n="floor2.label">K-Beauty &amp; Wellness · 592 sqm</span>
-        <h2 data-i18n="floor2.title">K-Beauty &amp; Wellness Zone</h2>
-        <p class="floor__quote" data-i18n="floor2.quote">"A journey of the senses that awakens the whole body."</p>
-        <p data-i18n="floor2.body">Hair salon, nail art, massage, Atomy Center, beauty booths, Korean Daiso, and parcel delivery, together in an immersive space for Korea's finest beauty and healthcare.</p>
-      </div>
-      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
-        <img src="assets/floor-2f-interior.jpg" alt="Interior render of the K-Beauty & Wellness zone">
-        <span class="floor__media-cap" data-i18n="floor2.cap">K-Beauty &amp; Wellness</span>
-      </a>
-    </div>
-  </section>
+        <a class="floor-panel" id="floor-2f" role="listitem" href="leasing.html#floor-plans">
+          <img class="floor-panel__img" src="assets/floor-2f-interior.jpg" alt="Interior render of the K-Beauty & Wellness zone" loading="lazy">
+          <span class="floor-panel__index numeral">02</span>
+          <span class="floor-panel__spine"><span data-i18n="floor2.cap">K-Beauty &amp; Wellness</span></span>
+          <div class="floor-panel__reveal">
+            <h2 data-i18n="floor2.title">K-Beauty &amp; Wellness Zone</h2>
+          </div>
+        </a>
 
-  <section class="floor" id="floor-3f">
-    <div class="container floor__grid">
-      <div class="floor__text reveal">
-        <span class="numeral">03</span>
-        <span class="floor__meta" data-i18n="floor3.label">K-Food &amp; Drama · 595 sqm</span>
-        <h2 data-i18n="floor3.title">K-Food &amp; Drama Zone</h2>
-        <p class="floor__quote" data-i18n="floor3.quote">"The moment you become the protagonist of a drama."</p>
-        <p data-i18n="floor3.body">A food court spanning Chinese, Japanese, Ramyun, Chicken, Bibimbap, Hansik, Samgyupsal, and Jjigae stalls, plus a beverage bar, serving gourmet cuisine in K-drama-inspired scenery.</p>
-      </div>
-      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
-        <img src="assets/floor-3f-interior.jpg" alt="Interior render of the K-Food & Drama zone">
-        <span class="floor__media-cap" data-i18n="floor3.cap">K-Food &amp; Drama</span>
-      </a>
-    </div>
-  </section>
+        <a class="floor-panel" id="floor-3f" role="listitem" href="leasing.html#floor-plans">
+          <img class="floor-panel__img" src="assets/floor-3f-interior.jpg" alt="Interior render of the K-Food & Drama zone" loading="lazy">
+          <span class="floor-panel__index numeral">03</span>
+          <span class="floor-panel__spine"><span data-i18n="floor3.cap">K-Food &amp; Drama</span></span>
+          <div class="floor-panel__reveal">
+            <h2 data-i18n="floor3.title">K-Food &amp; Drama Zone</h2>
+          </div>
+        </a>
 
-  <section class="floor" id="floor-4f">
-    <div class="container floor__grid">
-      <div class="floor__text reveal">
-        <span class="numeral">04</span>
-        <span class="floor__meta" data-i18n="floor4.label">K-Pop Entertain · 498 sqm</span>
-        <h2 data-i18n="floor4.title">K-Pop Entertain Zone</h2>
-        <p class="floor__quote" data-i18n="floor4.quote">"A stage where the whole family become the stars."</p>
-        <p data-i18n="floor4.body">Hope Partners Association offices, Korean Family KTV karaoke rooms, and a Celebrities Lounge with bar area and roof-deck access.</p>
+        <a class="floor-panel" id="floor-4f" role="listitem" href="leasing.html#floor-plans">
+          <img class="floor-panel__img" src="assets/floor-4f-interior.jpg" alt="Interior render of the K-Pop Entertain zone" loading="lazy">
+          <span class="floor-panel__index numeral">04</span>
+          <span class="floor-panel__spine"><span data-i18n="floor4.cap">K-Pop Entertain</span></span>
+          <div class="floor-panel__reveal">
+            <h2 data-i18n="floor4.title">K-Pop Entertain Zone</h2>
+          </div>
+        </a>
       </div>
-      <a class="floor__media reveal reveal--stagger-1" href="leasing.html#floor-plans">
-        <img src="assets/floor-4f-interior.jpg" alt="Interior render of the K-Pop Entertain zone">
-        <span class="floor__media-cap" data-i18n="floor4.cap">K-Pop Entertain</span>
-      </a>
     </div>
   </section>
 
@@ -167,7 +145,7 @@
       </div>
       <div>
         <p data-i18n="footer.email">Email: hello@thek-square.ph</p>
-        <p data-i18n="footer.phone">Phone: +63 (placeholder)</p>
+        <p data-i18n="footer.phone">Phone: +63 977 243 8333</p>
       </div>
       <div>
         <a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br>

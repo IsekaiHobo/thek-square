@@ -1,9 +1,11 @@
 .page-hero {
   padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
-  background: var(--color-stone);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 106, 0.10) 0%, rgba(212, 175, 106, 0) 55%),
+    var(--color-stone);
   border-bottom: 1px solid var(--color-line);
 }
-.page-hero h1 { margin: var(--space-xs) 0 var(--space-sm); }
+.page-hero h1 { margin: var(--space-sm) 0 var(--space-sm); }
 
 .plans__grid {
   display: grid;
@@ -19,7 +21,7 @@
 .tenant-fit { background: var(--color-stone); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
 .tenant-fit .lead { max-width: 56ch; margin-bottom: var(--space-md); }
 .tag-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.tag-row .badge { color: var(--color-ink); border-color: var(--color-line); background: var(--color-paper); }
+.tag-row .badge { color: var(--color-ink); border-color: var(--glass-line); }
 
 .how-it-works { background: var(--color-paper); }
 

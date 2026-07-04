@@ -1,4 +1,19 @@
-# Floor Interior Render Prompts — The K-Square
+# Render Prompts - The K-Square
+
+## HERO (night) → `hero-night.jpg`  *(PENDING: currently an interim copy of the dusk render)*
+
+> Cinematic night-time architectural photograph of a four-storey modern Korean lifestyle
+> mall on a city corner in Olongapo, Philippines. Dark moody sky, the building glowing
+> from within: warm champagne-gold interior lighting through floor-to-ceiling glass, a
+> large curved LED media facade playing colorful K-pop visuals, illuminated "THE K-SQUARE"
+> signage above the entrance. Wet asphalt reflections, a few silhouetted pedestrians,
+> palm trees in shadow. Low-key lighting, deep blacks, gold and amber highlights,
+> photorealistic, 35mm, 16:10 aspect ratio, no text overlays, no watermark.
+
+Export ~1900 px wide JPEG and overwrite `assets/hero-night.jpg`. No code changes needed.
+
+---
+
 
 The homepage (`index.html`) now shows a **photographic interior render** for each of the
 four floors instead of the CAD floor plans. Until you supply the real images, warm

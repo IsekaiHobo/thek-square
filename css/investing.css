@@ -1,19 +1,29 @@
 .page-hero {
   padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
-  background: var(--color-stone);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 106, 0.10) 0%, rgba(212, 175, 106, 0) 55%),
+    var(--color-stone);
   border-bottom: 1px solid var(--color-line);
 }
-.page-hero h1 { margin: var(--space-xs) 0 var(--space-sm); }
+.page-hero h1 { margin: var(--space-sm) 0 var(--space-sm); }
 
 .opportunity__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: stretch; }
 @media (min-width: 769px) { .opportunity__grid { grid-template-columns: 1fr 1fr; } }
-.opportunity__media { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
+.opportunity__media {
+  position: relative; overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-line);
+}
 .opportunity__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-/* On desktop, fill the column height so the image aligns edge-to-edge with the text */
 @media (min-width: 769px) { .opportunity__media { aspect-ratio: auto; } }
 
-/* ---------- Why invest (divided list, 3 items) ---------- */
-.why-invest { background: var(--color-stone); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
+/* ---------- Why invest ---------- */
+.why-invest {
+  background: var(--color-stone);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
 .why-invest h2 { max-width: 18ch; margin-bottom: var(--space-lg); }
 .why-invest__list { display: grid; grid-template-columns: 1fr; }
 @media (min-width: 769px) { .why-invest__list { grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); } }
@@ -22,6 +32,16 @@
 .why-invest__item .numeral { display: block; margin-bottom: var(--space-xs); font-size: clamp(2.2rem, 4vw, 3.2rem); }
 .why-invest__item h3 { margin-bottom: var(--space-xs); }
 .why-invest__item p { font-size: 0.95rem; color: var(--color-ink-muted); }
+
+/* ---------- Partnership / recovery ---------- */
+.partners h2 { max-width: 22ch; }
+.partners .lead { margin-top: var(--space-xs); }
+.recovery {
+  background: var(--color-stone);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+.recovery h2 { max-width: 22ch; }
 
 .snapshot { background: var(--color-paper); }
 .revenue-mix { background: var(--color-paper); }
