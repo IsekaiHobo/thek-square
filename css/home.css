@@ -5,25 +5,27 @@
   min-height: 640px;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
+  padding-bottom: clamp(3rem, 10vh, 7rem);
 }
 .hero__media {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   z-index: 0;
+  background: var(--color-paper);
 }
 .hero__overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
     linear-gradient(to bottom,
-      rgba(12, 10, 7, 0.72) 0%,
-      rgba(12, 10, 7, 0.35) 32%,
-      rgba(12, 10, 7, 0.45) 62%,
-      rgba(12, 10, 7, 0.96) 100%),
-    radial-gradient(ellipse at center 40%, rgba(12, 10, 7, 0) 0%, rgba(12, 10, 7, 0.45) 100%);
+      rgba(12, 10, 7, 0.38) 0%,
+      rgba(12, 10, 7, 0.08) 26%,
+      rgba(12, 10, 7, 0.10) 52%,
+      rgba(12, 10, 7, 0.88) 100%),
+    radial-gradient(ellipse at center 45%, rgba(12, 10, 7, 0) 45%, rgba(12, 10, 7, 0.28) 100%);
 }
 .hero__content {
   position: relative; z-index: 2;
@@ -63,18 +65,7 @@
 .vision__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (min-width: 769px) { .vision__media { aspect-ratio: auto; } }
 
-/* ---------- Floors (expanding panels) ---------- */
-.floor__meta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.3rem; }
-.floor__quote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: #EBD49B;
-  margin: var(--space-sm) 0;
-  max-width: 40ch;
-  padding-bottom: 0.1em;
-}
-
+/* ---------- Floors (expanding interactive panels) ---------- */
 .floors__slider {
   display: flex;
   gap: 12px;
@@ -87,46 +78,65 @@
   flex: 1 1 0;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--glass-line);
+  border: 2px solid var(--glass-line);
   border-radius: var(--radius);
   box-shadow: var(--glass-highlight), 0 24px 60px rgba(0, 0, 0, 0.35);
   text-decoration: none;
   color: var(--color-ink);
-  transition: flex-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  transition: flex-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.7s ease,
+              box-shadow 0.5s ease;
 }
-/* Interior render fills the panel; scrim + gradient sit above it */
+
+/* Interior render fills the panel and gently zooms out as the panel opens */
 .floor-panel__img {
   position: absolute; inset: 0; z-index: 0;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center;
   display: block;
+  transform: scale(1.12);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
-/* Flat scrim: dims the image snippet when collapsed, clears when open */
+
+/* Flat scrim dims the collapsed snippet; clears when the panel opens */
 .floor-panel::before {
   content: ""; position: absolute; inset: 0; z-index: 1;
   background-color: rgba(8, 7, 5, 0.62);
   transition: background-color 0.7s ease;
 }
-/* Bottom gradient: keeps the spine label and reveal text legible over any image */
+/* Bottom gradient keeps the label legible over any image */
 .floor-panel::after {
   content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background: linear-gradient(to top, rgba(8, 7, 5, 0.92) 0%, rgba(8, 7, 5, 0.4) 32%, rgba(8, 7, 5, 0) 62%);
+  background: linear-gradient(to top, rgba(8, 7, 5, 0.92) 0%, rgba(8, 7, 5, 0.45) 30%, rgba(8, 7, 5, 0) 62%);
+}
+
+/* Open state: default-open panel, or the one being hovered / focused */
+.floor-panel.is-open,
+.floor-panel:hover,
+.floor-panel:focus-visible {
+  flex-grow: 6;
+  border-color: var(--color-accent);
+  box-shadow: var(--glass-highlight), 0 30px 70px rgba(0, 0, 0, 0.5);
 }
 .floor-panel.is-open::before,
 .floor-panel:hover::before,
 .floor-panel:focus-visible::before { background-color: rgba(8, 7, 5, 0.12); }
+.floor-panel.is-open .floor-panel__img,
+.floor-panel:hover .floor-panel__img,
+.floor-panel:focus-visible .floor-panel__img { transform: scale(1); }
+
+/* Hovering / focusing another panel hands the spotlight over from the default-open one */
+.floors__slider:hover .floor-panel.is-open:not(:hover),
+.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) {
+  flex-grow: 1;
+  border-color: var(--glass-line);
+  box-shadow: var(--glass-highlight), 0 24px 60px rgba(0, 0, 0, 0.35);
+}
 .floors__slider:hover .floor-panel.is-open:not(:hover)::before,
 .floors__slider:focus-within .floor-panel.is-open:not(:focus-visible)::before { background-color: rgba(8, 7, 5, 0.62); }
-/* One open by default; hovering/focusing another panel takes over */
-.floor-panel.is-open,
-.floor-panel:hover,
-.floor-panel:focus-visible { flex-grow: 4.2; }
-.floors__slider:hover .floor-panel.is-open:not(:hover),
-.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) { flex-grow: 1; }
-.floor-panel:hover,
-.floor-panel:focus-visible {
-  box-shadow: var(--glass-highlight), 0 30px 70px rgba(0, 0, 0, 0.5);
-}
+.floors__slider:hover .floor-panel.is-open:not(:hover) .floor-panel__img,
+.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) .floor-panel__img { transform: scale(1.12); }
 
 /* Upright numeral, top-left */
 .floor-panel__index {
@@ -137,63 +147,101 @@
   text-shadow: 0 2px 18px rgba(8, 7, 5, 0.7);
 }
 
-/* Vertical spine label shown while the panel is collapsed */
-.floor-panel__spine {
-  position: absolute; left: 0; bottom: var(--space-lg);
-  width: 100%; z-index: 2;
-  display: flex; justify-content: center;
-  writing-mode: vertical-rl;
-  font-size: 0.82rem; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--color-ink);
-  text-shadow: 0 2px 14px rgba(8, 7, 5, 0.8);
-  transition: opacity 0.4s ease;
-}
-
-/* Floor title revealed when the panel opens */
-.floor-panel__reveal {
-  position: absolute; left: 0; bottom: 0; z-index: 2;
-  width: 22rem; max-width: 82vw;
-  padding: var(--space-lg);
-  opacity: 0;
-  transition: opacity 0.55s ease 0.1s;
+/* Label: icon shares the title's line (so it centres on the title, not the whole
+   block); the subtitle sits beneath, indented to align under the title. */
+.floor-panel__label {
+  position: absolute; left: 0; right: 0; bottom: var(--space-md);
+  z-index: 2;
+  padding: 0 var(--space-md);
   pointer-events: none;
 }
-.floor-panel__reveal h2 {
+.floor-panel__head {
+  display: flex; align-items: center; gap: var(--space-sm);
+}
+.floor-panel__icon {
+  flex: 0 0 auto;
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(20, 17, 12, 0.72);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: var(--color-accent);
+}
+.floor-panel__icon svg { width: 22px; height: 22px; display: block; }
+.floor-panel__title {
   margin: 0;
-  font-size: clamp(1.4rem, 2vw, 1.9rem);
-  line-height: 1.15;
-  max-width: 100%;
+  font-size: clamp(1.3rem, 1.9vw, 1.75rem);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.floor-panel__sub {
+  /* Fixed width + no reflow: indented under the title, aligned past the icon. */
+  margin: 0.1rem 0 0;
+  margin-left: calc(46px + var(--space-sm));
+  width: 15rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-ink-muted);
+}
+/* Title + subtitle slide in when the panel opens; the icon stays put */
+.floor-panel__title,
+.floor-panel__sub {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease 0.1s,
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+}
+.floor-panel.is-open .floor-panel__title,
+.floor-panel.is-open .floor-panel__sub,
+.floor-panel:hover .floor-panel__title,
+.floor-panel:hover .floor-panel__sub,
+.floor-panel:focus-visible .floor-panel__title,
+.floor-panel:focus-visible .floor-panel__sub { opacity: 1; transform: translateX(0); }
+.floors__slider:hover .floor-panel.is-open:not(:hover) .floor-panel__title,
+.floors__slider:hover .floor-panel.is-open:not(:hover) .floor-panel__sub,
+.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) .floor-panel__title,
+.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) .floor-panel__sub { opacity: 0; transform: translateX(20px); }
+
+/* Staggered slide-in when the slider scrolls into view */
+.floors__slider.reveal--visible .floor-panel {
+  animation: floorPanelIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.floors__slider.reveal--visible .floor-panel:nth-child(1) { animation-delay: 0.05s; }
+.floors__slider.reveal--visible .floor-panel:nth-child(2) { animation-delay: 0.20s; }
+.floors__slider.reveal--visible .floor-panel:nth-child(3) { animation-delay: 0.35s; }
+.floors__slider.reveal--visible .floor-panel:nth-child(4) { animation-delay: 0.50s; }
+@keyframes floorPanelIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-.floor-panel.is-open .floor-panel__spine,
-.floor-panel:hover .floor-panel__spine,
-.floor-panel:focus-visible .floor-panel__spine { opacity: 0; }
-.floor-panel.is-open .floor-panel__reveal,
-.floor-panel:hover .floor-panel__reveal,
-.floor-panel:focus-visible .floor-panel__reveal { opacity: 1; }
-
-/* When another panel is taken over, the default-open one collapses fully */
-.floors__slider:hover .floor-panel.is-open:not(:hover) .floor-panel__spine,
-.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) .floor-panel__spine { opacity: 1; }
-.floors__slider:hover .floor-panel.is-open:not(:hover) .floor-panel__reveal,
-.floors__slider:focus-within .floor-panel.is-open:not(:focus-visible) .floor-panel__reveal { opacity: 0; }
-
-/* On touch/narrow screens, stack panels open as cards */
+/* On touch / narrow screens, stack panels open as cards */
 @media (max-width: 768px) {
   .floors__slider { flex-direction: column; height: auto; gap: var(--space-sm); }
-  .floor-panel { flex: none; min-height: 340px; }
+  .floor-panel { flex: none; min-height: 320px; }
   .floor-panel,
   .floor-panel.is-open,
   .floors__slider:hover .floor-panel.is-open { flex-grow: 0; }
-  .floor-panel__spine { display: none; }
-  .floor-panel__reveal { opacity: 1; position: absolute; left: 0; right: 0; width: auto; max-width: none; }
+  .floor-panel__img,
+  .floor-panel.is-open .floor-panel__img { transform: scale(1); }
+  .floor-panel::before { background-color: rgba(8, 7, 5, 0.28); }
+  .floor-panel__title,
+  .floor-panel__sub { opacity: 1; transform: none; }
+  .floor-panel__sub { margin-left: calc(46px + var(--space-sm)); width: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .floor-panel,
-  .floor-panel__reveal,
-  .floor-panel__spine { transition: none; }
+  .floor-panel__img,
+  .floor-panel__title,
+  .floor-panel__sub { transition: none; }
+  .floor-panel__img { transform: scale(1); }
+  .floors__slider.reveal--visible .floor-panel { animation: none; }
 }
 
 /* ---------- Fork ---------- */

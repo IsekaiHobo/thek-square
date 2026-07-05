@@ -29,7 +29,9 @@
   </nav>
 
   <section class="hero">
-    <img class="hero__media" src="assets/hero-night.jpg" alt="Architectural render of The K-Square building at night on Magsaysay Drive">
+    <video class="hero__media" autoplay muted loop playsinline preload="auto" aria-label="Cinematic tour of The K-Square building at night on Magsaysay Drive">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <span class="badge hero__badge reveal" data-i18n="hero.eyebrow">Pre-Construction · Olongapo</span>
@@ -47,7 +49,7 @@
         <a href="leasing.html" class="link-accent" data-i18n="vision.link">Explore the floors</a>
       </div>
       <div class="vision__media reveal reveal--stagger-1">
-        <img src="assets/hero-render.png" alt="The K-Square exterior render">
+        <img src="assets/hero-poster.png" alt="The K-Square landmark illuminated at night on Magsaysay Drive">
       </div>
     </div>
   </section>
@@ -56,38 +58,58 @@
     <div class="container">
       <div class="floors__slider reveal" role="list">
         <a class="floor-panel is-open" id="floor-1f" role="listitem" href="leasing.html#floor-plans">
-          <img class="floor-panel__img" src="assets/floor-1f-interior.jpg" alt="Interior render of the K-Fun & Trend zone" loading="lazy">
+          <img class="floor-panel__img" src="assets/floor-1f-interior.png" alt="Interior render of the K-Fun & Trend zone" loading="lazy">
           <span class="floor-panel__index numeral">01</span>
-          <span class="floor-panel__spine"><span data-i18n="floor1.cap">K-Fun &amp; Trend</span></span>
-          <div class="floor-panel__reveal">
-            <h2 data-i18n="floor1.title">K-Fun &amp; Trend Zone</h2>
+          <div class="floor-panel__label">
+            <div class="floor-panel__head">
+              <span class="floor-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+              </span>
+              <h2 class="floor-panel__title" data-i18n="floor1.title">K-Fun &amp; Trend Zone</h2>
+            </div>
+            <p class="floor-panel__sub" data-i18n="floor1.sub">Beauty hub, photo studio &amp; character finds</p>
           </div>
         </a>
 
         <a class="floor-panel" id="floor-2f" role="listitem" href="leasing.html#floor-plans">
-          <img class="floor-panel__img" src="assets/floor-2f-interior.jpg" alt="Interior render of the K-Beauty & Wellness zone" loading="lazy">
+          <img class="floor-panel__img" src="assets/floor-2f-interior.png" alt="Interior render of the K-Beauty & Wellness zone" loading="lazy">
           <span class="floor-panel__index numeral">02</span>
-          <span class="floor-panel__spine"><span data-i18n="floor2.cap">K-Beauty &amp; Wellness</span></span>
-          <div class="floor-panel__reveal">
-            <h2 data-i18n="floor2.title">K-Beauty &amp; Wellness Zone</h2>
+          <div class="floor-panel__label">
+            <div class="floor-panel__head">
+              <span class="floor-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+              </span>
+              <h2 class="floor-panel__title" data-i18n="floor2.title">K-Beauty &amp; Wellness Zone</h2>
+            </div>
+            <p class="floor-panel__sub" data-i18n="floor2.sub">Salon, spa, wellness &amp; Korean essentials</p>
           </div>
         </a>
 
         <a class="floor-panel" id="floor-3f" role="listitem" href="leasing.html#floor-plans">
-          <img class="floor-panel__img" src="assets/floor-3f-interior.jpg" alt="Interior render of the K-Food & Drama zone" loading="lazy">
+          <img class="floor-panel__img" src="assets/floor-3f-interior.png" alt="Interior render of the K-Food & Drama zone" loading="lazy">
           <span class="floor-panel__index numeral">03</span>
-          <span class="floor-panel__spine"><span data-i18n="floor3.cap">K-Food &amp; Drama</span></span>
-          <div class="floor-panel__reveal">
-            <h2 data-i18n="floor3.title">K-Food &amp; Drama Zone</h2>
+          <div class="floor-panel__label">
+            <div class="floor-panel__head">
+              <span class="floor-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+              </span>
+              <h2 class="floor-panel__title" data-i18n="floor3.title">K-Food &amp; Drama Zone</h2>
+            </div>
+            <p class="floor-panel__sub" data-i18n="floor3.sub">K-drama food court &amp; beverage bar</p>
           </div>
         </a>
 
         <a class="floor-panel" id="floor-4f" role="listitem" href="leasing.html#floor-plans">
-          <img class="floor-panel__img" src="assets/floor-4f-interior.jpg" alt="Interior render of the K-Pop Entertain zone" loading="lazy">
+          <img class="floor-panel__img" src="assets/floor-4f-interior.png" alt="Interior render of the K-Pop Entertain zone" loading="lazy">
           <span class="floor-panel__index numeral">04</span>
-          <span class="floor-panel__spine"><span data-i18n="floor4.cap">K-Pop Entertain</span></span>
-          <div class="floor-panel__reveal">
-            <h2 data-i18n="floor4.title">K-Pop Entertain Zone</h2>
+          <div class="floor-panel__label">
+            <div class="floor-panel__head">
+              <span class="floor-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+              <h2 class="floor-panel__title" data-i18n="floor4.title">K-Pop Entertain Zone</h2>
+            </div>
+            <p class="floor-panel__sub" data-i18n="floor4.sub">KTV, celebrity lounge &amp; roof-deck stage</p>
           </div>
         </a>
       </div>
