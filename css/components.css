@@ -176,8 +176,14 @@
   mix-blend-mode: multiply;       /* lets the mat tint the white CAD background */
 }
 .plan-card__meta { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-sm); }
-.plan-card__area { font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; color: var(--color-accent); }
+.plan-card__area { font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; color: var(--color-accent); white-space: nowrap; }
 .plan-card__zone { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--color-ink); }
+/* On phones the zone name + area don't share a row well ("1F · K-Fun & Trend" wraps and
+   "464 sqm" splits), so stack them: full-width zone on top, area beneath. */
+@media (max-width: 768px) {
+  .plan-card__meta { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .plan-card__zone { font-size: 1.3rem; }
+}
 
 /* ---------- Stats strip ---------- */
 .stats {

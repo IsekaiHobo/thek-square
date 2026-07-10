@@ -20,7 +20,7 @@
       /* ---- Home: hero ---- */
       'home.title': 'The K-Square: Where Korea Comes Alive in Olongapo',
       'hero.eyebrow': 'Pre-Construction · Olongapo',
-      'hero.title': 'The K-Square',
+      'hero.title': 'The K‑Square',
       'hero.tagline': "Korea's beauty, food, and entertainment culture, built as a four-floor investment and leasing destination in Olongapo.",
       'hero.cta': 'Discover the Vision',
 
@@ -56,7 +56,7 @@
       'floor4.sub': 'KTV, celebrity lounge & roof-deck stage',
 
       /* ---- Home: fork / stats / location ---- */
-      'fork.title': 'How to Join The K-Square',
+      'fork.title': 'How to Join The K‑Square',
       'fork.brands.title': 'Bring your brand to life',
       'fork.brands.body': 'Lease retail, beauty, food, or entertainment space across four themed floors built to draw foot traffic from day one.',
       'fork.brands.link': 'Explore Leasing',
@@ -75,7 +75,7 @@
       /* ---- Leasing ---- */
       'leasing.title': 'Leasing: The K-Square',
       'leasing.hero.eyebrow': 'Leasing',
-      'leasing.hero.title': 'Bring your brand to The K-Square',
+      'leasing.hero.title': 'Bring your brand to The K‑Square',
       'leasing.hero.lead': 'Four themed floors. One destination built to draw foot traffic from day one.',
       'leasing.floors.title': 'Available spaces, by floor',
       'leasing.floors.lead': 'Real architectural plans for each level. Inquire about anchor and in-line positions.',
