@@ -56,7 +56,7 @@
       'floor4.sub': 'KTV, celebrity lounge & roof-deck stage',
 
       /* ---- Home: fork / stats / location ---- */
-      'fork.title': 'Two ways to join The K-Square',
+      'fork.title': 'How to Join The K-Square',
       'fork.brands.title': 'Bring your brand to life',
       'fork.brands.body': 'Lease retail, beauty, food, or entertainment space across four themed floors built to draw foot traffic from day one.',
       'fork.brands.link': 'Explore Leasing',
@@ -111,7 +111,7 @@
       'leasing.how3.body': 'Terms are set out in writing ahead of a formal lease agreement.',
       'leasing.how4.title': 'Fit-Out & Launch',
       'leasing.how4.body': 'Build your space alongside the development timeline and open with the destination.',
-      'cta.brochure': 'Download Brochure',
+      'cta.brochure': 'Download Lease Document',
       'cta.consult': 'Book a Consultation',
       'leasing.inquiry.title': 'Inquire About Leasing',
       'leasing.confirm': 'Thanks, our leasing team will reach out shortly.',
@@ -260,7 +260,7 @@
       'floor4.sub': 'KTV, 셀러브리티 라운지, 루프덱 무대',
 
       /* ---- Home: fork / stats / location ---- */
-      'fork.title': '더 케이스퀘어에 참여하는 두 가지 방법',
+      'fork.title': '더 케이스퀘어 참여 방법',
       'fork.brands.title': '당신의 브랜드를 펼치세요',
       'fork.brands.body': '첫날부터 유동 인구를 끌어모으도록 설계된 4개의 테마 층에서 리테일, 뷰티, 푸드, 엔터테인먼트 공간을 임대하세요.',
       'fork.brands.link': '임대 알아보기',
@@ -315,7 +315,7 @@
       'leasing.how3.body': '정식 임대 계약에 앞서 조건을 서면으로 정리합니다.',
       'leasing.how4.title': '인테리어 시공 및 오픈',
       'leasing.how4.body': '개발 일정에 맞춰 공간을 시공하고, 복합 공간 오픈과 함께 문을 엽니다.',
-      'cta.brochure': '브로슈어 다운로드',
+      'cta.brochure': '임대 안내서 다운로드',
       'cta.consult': '상담 예약',
       'leasing.inquiry.title': '임대 문의',
       'leasing.confirm': '감사합니다. 임대팀이 곧 연락드리겠습니다.',

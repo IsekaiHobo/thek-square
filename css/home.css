@@ -232,6 +232,9 @@
   .floor-panel::before { background-color: rgba(8, 7, 5, 0.28); }
   .floor-panel__title,
   .floor-panel__sub { opacity: 1; transform: none; }
+  /* Let titles wrap instead of clipping: long EN names (e.g. "K-Beauty & Wellness Zone")
+     overflow the panel at the desktop nowrap size, so relax wrapping and trim the font on phones. */
+  .floor-panel__title { white-space: normal; font-size: 1.05rem; line-height: 1.2; }
   .floor-panel__sub { margin-left: calc(46px + var(--space-sm)); width: auto; }
 }
 
@@ -247,7 +250,9 @@
 /* ---------- Fork ---------- */
 .fork h2 { max-width: 20ch; margin-bottom: var(--space-lg); }
 .fork__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
-@media (min-width: 769px) { .fork__grid { grid-template-columns: 1fr 1fr; } }
+/* HIDDEN(investing): single centered card while Investing is hidden.
+   To restore the two-column layout, swap the rule below back to: grid-template-columns: 1fr 1fr; (drop max-width/margin). */
+@media (min-width: 769px) { .fork__grid { grid-template-columns: 1fr; max-width: 620px; margin-inline: auto; } }
 .fork__card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-line);
