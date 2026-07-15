@@ -14,7 +14,7 @@
       'nav.investing': 'Investing',
       'nav.contact': 'Contact',
       'footer.address': 'Magsaysay Dr, Olongapo City, Zambales, Philippines',
-      'footer.email': 'Email: hello@thek-square.ph',
+      'footer.email': 'Email: info@ksqph.com · support@ksqph.com',
       'footer.phone': 'Phone: +63 977 243 8333',
 
       /* ---- Home: hero ---- */
@@ -182,7 +182,7 @@
       'contact.visit': 'Visit Us',
       'contact.address': 'R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales, Philippines',
       'contact.contact': 'Contact',
-      'contact.details': 'hello@thek-square.ph · +63 977 243 8333',
+      'contact.details': 'info@ksqph.com · support@ksqph.com · +63 977 243 8333',
       'contact.office': 'Office',
       'contact.office.address': 'Lot 5, Retail #31, Time Square Bldg., Rizal Highway, C.B.D Area, Subic Bay Freeport Zone',
       'contact.confirm': "Thanks for reaching out, we'll respond shortly.",
@@ -218,7 +218,7 @@
       'nav.investing': '투자',
       'nav.contact': '문의',
       'footer.address': '필리핀 잠발레스 올롱가포시 막사이사이 거리',
-      'footer.email': '이메일: hello@thek-square.ph',
+      'footer.email': '이메일: info@ksqph.com · support@ksqph.com',
       'footer.phone': '전화: +63 977 243 8333',
 
       /* ---- Home: hero ---- */
@@ -386,7 +386,7 @@
       'contact.visit': '오시는 길',
       'contact.address': 'R7GJ+QXG, 필리핀 잠발레스 올롱가포시 막사이사이 거리',
       'contact.contact': '연락처',
-      'contact.details': 'hello@thek-square.ph · +63 977 243 8333',
+      'contact.details': 'info@ksqph.com · support@ksqph.com · +63 977 243 8333',
       'contact.office': '사무실',
       'contact.office.address': '필리핀 수빅베이 자유무역지대 C.B.D 지역 리잘 하이웨이 타임스퀘어 빌딩 리테일 #31, Lot 5',
       'contact.confirm': '문의해 주셔서 감사합니다. 곧 회신드리겠습니다.',
