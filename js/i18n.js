@@ -12,10 +12,15 @@
       /* ---- Nav / footer (shared) ---- */
       'nav.leasing': 'Leasing',
       'nav.investing': 'Investing',
+      'nav.experience': 'Experience',
       'nav.contact': 'Contact',
-      'footer.address': 'Magsaysay Dr, Olongapo City, Zambales, Philippines',
+      'experience.title': 'Experience Korea: The K-Square',
+      'experience.hero.eyebrow': 'Experience',
+      'experience.hero.title': 'The Korea Experience',
+      'experience.hero.lead': 'Step inside the sights, flavors, and energy of Korea — scroll to explore, tap any tile to open it full-screen.',
+      'footer.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'footer.email': 'Email: info@ksqph.com · support@ksqph.com',
-      'footer.phone': 'Phone: +63 977 243 8333',
+      'footer.phone': 'Phone: 0977.243.8333',
 
       /* ---- Home: hero ---- */
       'home.title': 'The K-Square: Where Korea Comes Alive in Olongapo',
@@ -70,7 +75,7 @@
       'stats.place.num': 'Olongapo',
       'stats.place.label': 'Magsaysay Drive',
       'location.title': 'Find Us',
-      'location.address': 'R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales, Philippines',
+      'location.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
 
       /* ---- Leasing ---- */
       'leasing.title': 'Leasing: The K-Square',
@@ -180,9 +185,9 @@
       'contact.hero.title': 'Get in touch',
       'contact.hero.lead': 'Questions about The K-Square? Reach out and our team will follow up.',
       'contact.visit': 'Visit Us',
-      'contact.address': 'R7GJ+QXG, Magsaysay Dr, Olongapo City, Zambales, Philippines',
+      'contact.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'contact.contact': 'Contact',
-      'contact.details': 'info@ksqph.com · support@ksqph.com · +63 977 243 8333',
+      'contact.details': 'info@ksqph.com · support@ksqph.com · 0977.243.8333',
       'contact.office': 'Office',
       'contact.office.address': 'Lot 5, Retail #31, Time Square Bldg., Rizal Highway, C.B.D Area, Subic Bay Freeport Zone',
       'contact.confirm': "Thanks for reaching out, we'll respond shortly.",
@@ -216,10 +221,15 @@
       /* ---- Nav / footer (shared) ---- */
       'nav.leasing': '임대',
       'nav.investing': '투자',
+      'nav.experience': '체험',
       'nav.contact': '문의',
-      'footer.address': '필리핀 잠발레스 올롱가포시 막사이사이 거리',
+      'experience.title': '한국을 경험하다: 더 케이스퀘어',
+      'experience.hero.eyebrow': '체험',
+      'experience.hero.title': '한국을 경험하다',
+      'experience.hero.lead': '한국의 풍경, 맛, 활기를 만나보세요 — 스크롤하며 둘러보고 타일을 눌러 전체 화면으로 감상하세요.',
+      'footer.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'footer.email': '이메일: info@ksqph.com · support@ksqph.com',
-      'footer.phone': '전화: +63 977 243 8333',
+      'footer.phone': '전화: 0977.243.8333',
 
       /* ---- Home: hero ---- */
       'home.title': '더 케이스퀘어: 올롱가포에서 만나는 한국',
@@ -274,7 +284,7 @@
       'stats.place.num': '올롱가포',
       'stats.place.label': '막사이사이 거리',
       'location.title': '오시는 길',
-      'location.address': 'R7GJ+QXG, 필리핀 잠발레스 올롱가포시 막사이사이 거리',
+      'location.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
 
       /* ---- Leasing ---- */
       'leasing.title': '임대: 더 케이스퀘어',
@@ -384,9 +394,9 @@
       'contact.hero.title': '연락하기',
       'contact.hero.lead': '더 케이스퀘어가 궁금하신가요? 문의를 남겨 주시면 팀이 회신드리겠습니다.',
       'contact.visit': '오시는 길',
-      'contact.address': 'R7GJ+QXG, 필리핀 잠발레스 올롱가포시 막사이사이 거리',
+      'contact.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'contact.contact': '연락처',
-      'contact.details': 'info@ksqph.com · support@ksqph.com · +63 977 243 8333',
+      'contact.details': 'info@ksqph.com · support@ksqph.com · 0977.243.8333',
       'contact.office': '사무실',
       'contact.office.address': '필리핀 수빅베이 자유무역지대 C.B.D 지역 리잘 하이웨이 타임스퀘어 빌딩 리테일 #31, Lot 5',
       'contact.confirm': '문의해 주셔서 감사합니다. 곧 회신드리겠습니다.',

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+  <title data-i18n="experience.title">Experience Korea: The K-Square</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/experience.css">
+</head>
+<body>
+
+  <nav class="nav nav--static">
+    <a href="index.html" class="nav__logo">THE K-SQUARE</a>
+    <ul class="nav__links">
+      <li><a href="leasing.html" data-i18n="nav.leasing">Leasing</a></li>
+      <!-- HIDDEN(investing): unhide to restore the Investing nav link
+      <li><a href="investing.html" data-i18n="nav.investing">Investing</a></li>
+      -->
+      <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__lang" id="lang-toggle" type="button" aria-label="View in Korean" data-lang-next="ko">한국어</button>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="badge reveal" data-i18n="experience.hero.eyebrow">Experience</span>
+      <h1 class="reveal reveal--stagger-1" data-i18n="experience.hero.title">The Korea Experience</h1>
+      <p class="lead reveal reveal--stagger-2" data-i18n="experience.hero.lead">Step inside the sights, flavors, and energy of Korea — scroll to explore, tap any tile to open it full-screen.</p>
+    </div>
+  </header>
+
+  <section class="section experience">
+    <div class="container">
+      <!-- Interactive bento gallery is rendered here by js/experience.js -->
+      <div id="experience-gallery" class="exp-gallery" aria-label="Korea experience gallery"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><span class="nav__logo">THE K-SQUARE</span><p data-i18n="footer.address">#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200</p></div>
+      <div><p data-i18n="footer.email">Email: info@ksqph.com · support@ksqph.com</p><p data-i18n="footer.phone">Phone: 0977.243.8333</p></div>
+      <div><a href="leasing.html" data-i18n="nav.leasing">Leasing</a><br><a href="experience.html" data-i18n="nav.experience">Experience</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/experience.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+  </script>
+</body>
+</html>

@@ -45,9 +45,11 @@
 }
 .hero__tagline {
   color: var(--color-ink);
-  opacity: 0.9;
-  max-width: 52ch;
-  margin: 0 auto var(--space-md);
+  opacity: 0.95;
+  max-width: 40ch;
+  margin: 0 auto;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.4;
 }
 .hero__tagline:not(.reveal),
 .hero__tagline.reveal--visible { opacity: 0.9; }
