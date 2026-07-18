@@ -8,19 +8,28 @@
   /* ---- Media data ------------------------------------------------------
    * type: 'image' | 'video'
    * span: 'lg' (2x2) | 'wide' (2x1) | 'tall' (1x2) | 'sm' (1x1)
-   * FILLER: swap `url` (and title/desc) for real Korea photos/videos later.
-   * Videos just need type:'video' and an .mp4 url — the box supports both. */
+   * span is chosen to match each file's orientation:
+   *   landscape -> 'lg' (2x2) / 'wide' (2x1) / 'sm' (1x1)
+   *   portrait  -> 'tall' (1x2)
+   *   square    -> 'sm' (1x1)
+   * To add/replace media: drop a file in assets/experience/ and edit a line below. */
   var MEDIA = [
-    { id: 1,  type: 'image', title: 'K-Beauty',      desc: 'Skincare and glow, Seoul-style.',        url: 'assets/BuildingDay.png',        span: 'lg'   },
-    { id: 2,  type: 'video', title: 'Street Food',   desc: 'Sizzling stalls after dark.',            url: 'assets/hero.mp4',               span: 'wide' },
-    { id: 3,  type: 'image', title: 'K-Pop Stage',   desc: 'Lights, sound, superstardom.',           url: 'assets/floor-4f-interior.png',  span: 'sm'   },
-    { id: 4,  type: 'image', title: 'Hanbok',        desc: 'Tradition woven in color.',              url: 'assets/floor-2f-interior.png',  span: 'tall' },
-    { id: 5,  type: 'image', title: 'Night Market',  desc: 'A city that never dims.',                url: 'assets/BuildingNight1.png',     span: 'wide' },
-    { id: 6,  type: 'image', title: 'Café Culture',  desc: 'Slow mornings, bold roasts.',            url: 'assets/floor-3f-interior.png',  span: 'sm'   },
-    { id: 7,  type: 'image', title: 'Palace Grounds',desc: 'Where history still breathes.',          url: 'assets/hero-poster.png',        span: 'tall' },
-    { id: 8,  type: 'video', title: 'K-Drama Scene', desc: 'Step into your own storyline.',          url: 'assets/hero.mp4',               span: 'sm'   },
-    { id: 9,  type: 'image', title: 'Skincare Bar',  desc: 'Curated Korean essentials.',             url: 'assets/floor-1f-interior.png',  span: 'sm'   },
-    { id: 10, type: 'image', title: 'City Skyline',  desc: 'Neon, glass, and momentum.',             url: 'assets/BuildingDay.png',        span: 'wide' }
+    { id: 1,  type: 'video', title: 'Seoul in Motion', desc: 'The city that never slows.',        url: 'assets/experience/vid-l1.mp4', span: 'lg'   }, // landscape
+    { id: 2,  type: 'image', title: 'Street Style',    desc: 'Everyday Korean fashion.',          url: 'assets/experience/img-p1.jpg', span: 'tall' }, // portrait
+    { id: 3,  type: 'image', title: 'K-Beauty',        desc: 'The Korean skincare ritual.',       url: 'assets/experience/img-l3.jpg', span: 'sm'   }, // landscape
+    { id: 4,  type: 'image', title: 'Global Icons',    desc: 'K-pop on the world stage.',         url: 'assets/experience/img-sq1.jpg', span: 'sm'  }, // square
+    { id: 5,  type: 'video', title: 'Vertical Seoul',  desc: 'Life down every alley.',            url: 'assets/experience/vid-p1.mp4', span: 'tall' }, // portrait
+    { id: 6,  type: 'video', title: 'Neon Avenue',     desc: 'After dark in the capital.',        url: 'assets/experience/vid-l2.mp4', span: 'wide' }, // landscape
+    { id: 7,  type: 'image', title: 'Seoul Life',      desc: 'Moments across the city.',          url: 'assets/experience/img-l2.jpg', span: 'sm'   }, // landscape
+    { id: 8,  type: 'image', title: 'K-Pop',           desc: 'Chart-topping energy.',             url: 'assets/experience/img-p2.jpg', span: 'tall' }, // portrait
+    { id: 9,  type: 'video', title: 'From Above',      desc: 'Korea from a new angle.',           url: 'assets/experience/vid-l5.mp4', span: 'lg'   }, // landscape
+    { id: 10, type: 'image', title: 'The Stage',       desc: 'Where stars are made.',             url: 'assets/experience/img-l4.jpg', span: 'sm'   }, // landscape
+    { id: 11, type: 'video', title: 'Market Buzz',     desc: 'Street food and finds.',            url: 'assets/experience/vid-l3.mp4', span: 'sm'   }, // landscape
+    { id: 12, type: 'image', title: 'Little Moments',  desc: 'The texture of daily life.',        url: 'assets/experience/img-l1.jpg', span: 'sm'   }, // landscape
+    { id: 13, type: 'video', title: 'City Lights',     desc: 'Evenings on the avenue.',           url: 'assets/experience/vid-l6.mp4', span: 'wide' }, // landscape
+    { id: 14, type: 'image', title: 'K-Culture',       desc: 'A taste of Korea.',                 url: 'assets/experience/img-sq2.png', span: 'sm'  }, // square
+    { id: 15, type: 'video', title: 'Skyline',         desc: "Seoul's endless horizon.",          url: 'assets/experience/vid-l4.mp4', span: 'sm'   }, // landscape
+    { id: 16, type: 'image', title: 'Discover',        desc: 'Begin your Korea journey.',         url: 'assets/experience/img-l5.jpg', span: 'sm'   }  // landscape
   ];
 
   var gallery = document.getElementById('experience-gallery');
