@@ -8,28 +8,33 @@
   /* ---- Media data ------------------------------------------------------
    * type: 'image' | 'video'
    * span: 'lg' (2x2) | 'wide' (2x1) | 'tall' (1x2) | 'sm' (1x1)
-   * span is chosen to match each file's orientation:
-   *   landscape -> 'lg' (2x2) / 'wide' (2x1) / 'sm' (1x1)
-   *   portrait  -> 'tall' (1x2)
-   *   square    -> 'sm' (1x1)
-   * To add/replace media: drop a file in assets/experience/ and edit a line below. */
+   * title  = the label shown on hover / in the lightbox (matches the filename).
+   * span   = box shape, matched to the file's orientation:
+   *          landscape -> 'lg' (2x2) / 'wide' (2x1) / 'sm' (1x1)
+   *          portrait  -> 'tall' (1x2)
+   *          square    -> 'sm' (1x1)
+   * pos    = optional focal point for the tile crop (CSS object-position),
+   *          e.g. 'center top' keeps faces in frame on a tall subject.
+   * desc   = optional one-line subtitle under the title (omit to show name only).
+   * To add/replace media: drop a file in assets/experience/ and edit a line below.
+   * Note: URLs are percent-encoded because the filenames contain spaces. */
   var MEDIA = [
-    { id: 1,  type: 'video', title: 'Seoul in Motion', desc: 'The city that never slows.',        url: 'assets/experience/vid-l1.mp4', span: 'lg'   }, // landscape
-    { id: 2,  type: 'image', title: 'Street Style',    desc: 'Everyday Korean fashion.',          url: 'assets/experience/img-p1.jpg', span: 'tall' }, // portrait
-    { id: 3,  type: 'image', title: 'K-Beauty',        desc: 'The Korean skincare ritual.',       url: 'assets/experience/img-l3.jpg', span: 'sm'   }, // landscape
-    { id: 4,  type: 'image', title: 'Global Icons',    desc: 'K-pop on the world stage.',         url: 'assets/experience/img-sq1.jpg', span: 'sm'  }, // square
-    { id: 5,  type: 'video', title: 'Vertical Seoul',  desc: 'Life down every alley.',            url: 'assets/experience/vid-p1.mp4', span: 'tall' }, // portrait
-    { id: 6,  type: 'video', title: 'Neon Avenue',     desc: 'After dark in the capital.',        url: 'assets/experience/vid-l2.mp4', span: 'wide' }, // landscape
-    { id: 7,  type: 'image', title: 'Seoul Life',      desc: 'Moments across the city.',          url: 'assets/experience/img-l2.jpg', span: 'sm'   }, // landscape
-    { id: 8,  type: 'image', title: 'K-Pop',           desc: 'Chart-topping energy.',             url: 'assets/experience/img-p2.jpg', span: 'tall' }, // portrait
-    { id: 9,  type: 'video', title: 'From Above',      desc: 'Korea from a new angle.',           url: 'assets/experience/vid-l5.mp4', span: 'lg'   }, // landscape
-    { id: 10, type: 'image', title: 'The Stage',       desc: 'Where stars are made.',             url: 'assets/experience/img-l4.jpg', span: 'sm'   }, // landscape
-    { id: 11, type: 'video', title: 'Market Buzz',     desc: 'Street food and finds.',            url: 'assets/experience/vid-l3.mp4', span: 'sm'   }, // landscape
-    { id: 12, type: 'image', title: 'Little Moments',  desc: 'The texture of daily life.',        url: 'assets/experience/img-l1.jpg', span: 'sm'   }, // landscape
-    { id: 13, type: 'video', title: 'City Lights',     desc: 'Evenings on the avenue.',           url: 'assets/experience/vid-l6.mp4', span: 'wide' }, // landscape
-    { id: 14, type: 'image', title: 'K-Culture',       desc: 'A taste of Korea.',                 url: 'assets/experience/img-sq2.png', span: 'sm'  }, // square
-    { id: 15, type: 'video', title: 'Skyline',         desc: "Seoul's endless horizon.",          url: 'assets/experience/vid-l4.mp4', span: 'sm'   }, // landscape
-    { id: 16, type: 'image', title: 'Discover',        desc: 'Begin your Korea journey.',         url: 'assets/experience/img-l5.jpg', span: 'sm'   }  // landscape
+    { id: 1,  type: 'video', title: 'Seoul In Motion',   url: 'assets/experience/Seoul%20In%20Motion.mp4',   span: 'lg'   }, // landscape
+    { id: 2,  type: 'image', title: 'Amuse',             url: 'assets/experience/Amuse.jpg',                 span: 'tall' }, // portrait
+    { id: 3,  type: 'image', title: 'Beauty of Joseon',  url: 'assets/experience/Beauty%20of%20Joseon.jpg',  span: 'sm'   }, // landscape
+    { id: 4,  type: 'image', title: 'BTS',               url: 'assets/experience/BTS.jpg',                   span: 'sm',   pos: 'center top' }, // square — crop from the top so faces stay in frame
+    { id: 5,  type: 'video', title: 'Korean Beauty',     url: 'assets/experience/Korean%20Beauty.mp4',       span: 'tall' }, // portrait
+    { id: 6,  type: 'video', title: 'Budae jjigae',      url: 'assets/experience/Budae%20jjigae.mp4',        span: 'wide' }, // landscape
+    { id: 7,  type: 'image', title: 'Massage',           url: 'assets/experience/Massage.jpg',               span: 'sm'   }, // landscape
+    { id: 8,  type: 'image', title: 'Black Pink',        url: 'assets/experience/Black%20Pink.jpg',          span: 'tall' }, // portrait
+    { id: 9,  type: 'video', title: 'Bibimbap',          url: 'assets/experience/Bibimbap.mp4',              span: 'lg'   }, // landscape
+    { id: 10, type: 'image', title: 'Global Icons',      url: 'assets/experience/Global%20Icons.jpg',        span: 'sm'   }, // landscape
+    { id: 11, type: 'video', title: 'Korean Market',     url: 'assets/experience/Korean%20Market.mp4',       span: 'sm'   }, // landscape
+    { id: 12, type: 'image', title: 'Crane Game',        url: 'assets/experience/Crane%20Game.jpg',          span: 'sm'   }, // landscape
+    { id: 13, type: 'video', title: 'KBBQ',              url: 'assets/experience/KBBQ.mp4',                  span: 'wide' }, // landscape
+    { id: 14, type: 'image', title: '4 Cut Photos',      url: 'assets/experience/4%20Cut%20Photos.png',      span: 'sm'   }, // square
+    { id: 15, type: 'video', title: 'The Palace',        url: 'assets/experience/The%20Palace.mp4',          span: 'sm'   }, // landscape
+    { id: 16, type: 'image', title: 'Korean Food',       url: 'assets/experience/Korean%20Food.jpg',         span: 'sm'   }  // landscape
   ];
 
   var gallery = document.getElementById('experience-gallery');
@@ -89,11 +94,20 @@
     tile.style.transitionDelay = (i * 0.05) + 's';
     tile.setAttribute('aria-label', 'Open ' + item.title);
 
-    tile.appendChild(buildMedia(item, 'exp-tile__media'));
+    var tileMedia = buildMedia(item, 'exp-tile__media');
+    if (item.pos) tileMedia.style.objectPosition = item.pos;  // focal point for the crop
+    tile.appendChild(tileMedia);
 
     var cap = document.createElement('div');
     cap.className = 'exp-tile__caption';
-    cap.innerHTML = '<h3>' + item.title + '</h3><p>' + item.desc + '</p>';
+    var capH = document.createElement('h3');
+    capH.textContent = item.title;
+    cap.appendChild(capH);
+    if (item.desc) {
+      var capP = document.createElement('p');
+      capP.textContent = item.desc;
+      cap.appendChild(capP);
+    }
     tile.appendChild(cap);
 
     tile.addEventListener('click', function () { openLightbox(i); });
@@ -156,7 +170,7 @@
     if (item.type === 'video') { media.controls = true; media.autoplay = true; }
     stageMedia.appendChild(media);
     capTitle.textContent = item.title;
-    capDesc.textContent = item.desc;
+    capDesc.textContent = item.desc || '';
     thumbs.forEach(function (t, ti) { t.classList.toggle('is-active', ti === i); });
     // trigger the stage animation
     stageMedia.classList.remove('exp-lightbox__media--in');
