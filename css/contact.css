@@ -1,11 +1,4 @@
-.page-hero {
-  padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 106, 0.10) 0%, rgba(212, 175, 106, 0) 55%),
-    var(--color-stone);
-  border-bottom: 1px solid var(--color-line);
-}
-.page-hero h1 { margin: var(--space-sm) 0 var(--space-sm); }
+/* .page-hero now lives in components.css (shared by all page-hero pages) */
 
 .contact__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: start; }
 @media (min-width: 769px) { .contact__grid { grid-template-columns: 1.2fr 1fr; } }

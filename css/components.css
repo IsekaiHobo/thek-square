@@ -414,3 +414,15 @@ form button[type="submit"] { margin-top: var(--space-sm); }
   background-clip: text;
   color: transparent;
 }
+
+/* ---------- Page hero (shared by leasing / investing / contact / experience) ----------
+   Lives here rather than in each page stylesheet so every page that uses the
+   .page-hero markup clears the fixed nav. */
+.page-hero {
+  padding: clamp(8rem, 18vh, 12rem) 0 var(--space-xl);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 106, 0.10) 0%, rgba(212, 175, 106, 0) 55%),
+    var(--color-stone);
+  border-bottom: 1px solid var(--color-line);
+}
+.page-hero h1 { margin: var(--space-sm) 0 var(--space-sm); }

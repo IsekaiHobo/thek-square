@@ -16,7 +16,7 @@
       'nav.contact': 'Contact',
       'experience.title': 'Experience Korea: The K-Square',
       'experience.hero.eyebrow': 'Experience',
-      'experience.hero.title': 'The Korea Experience',
+      'experience.hero.title': 'The Korean Experience',
       'experience.hero.lead': 'Step inside the sights, flavors, and energy of Korea — scroll to explore, tap any tile to open it full-screen.',
       'footer.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'footer.email': 'Email: info@ksqph.com · support@ksqph.com',
