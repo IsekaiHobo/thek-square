@@ -1,5 +1,7 @@
 /* .page-hero now lives in components.css (shared by all page-hero pages) */
 
+.hero-cta { margin-top: var(--space-md); }
+
 .plans__grid {
   display: grid;
   grid-template-columns: 1fr;

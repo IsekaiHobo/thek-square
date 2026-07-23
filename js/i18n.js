@@ -19,7 +19,7 @@
       'experience.hero.title': 'The Korean Experience',
       'experience.hero.lead': 'Step inside the sights, flavors, and energy of Korea — scroll to explore, tap any tile to open it full-screen.',
       'footer.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
-      'footer.email': 'Email: info@ksqph.com · support@ksqph.com',
+      'footer.email': 'Email: sales@ksqph.com',
       'footer.phone': 'Phone: 0977.243.8333',
 
       /* ---- Home: hero ---- */
@@ -327,7 +327,7 @@
       'contact.visit': 'Visit Us',
       'contact.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'contact.contact': 'Contact',
-      'contact.details': 'info@ksqph.com · support@ksqph.com · 0977.243.8333',
+      'contact.details': 'sales@ksqph.com · 0977.243.8333',
       'contact.office': 'Office',
       'contact.office.address': 'Lot 5, Retail #31, Time Square Bldg., Rizal Highway, C.B.D Area, Subic Bay Freeport Zone',
       'contact.confirm': "Thanks for reaching out, we'll respond shortly.",
@@ -368,7 +368,7 @@
       'experience.hero.title': '한국을 경험하다',
       'experience.hero.lead': '한국의 풍경, 맛, 활기를 만나보세요 — 스크롤하며 둘러보고 타일을 눌러 전체 화면으로 감상하세요.',
       'footer.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
-      'footer.email': '이메일: info@ksqph.com · support@ksqph.com',
+      'footer.email': '이메일: sales@ksqph.com',
       'footer.phone': '전화: 0977.243.8333',
 
       /* ---- Home: hero ---- */
@@ -676,7 +676,7 @@
       'contact.visit': '오시는 길',
       'contact.address': '#1 1ST. Street, Corner Magsaysay Dr. Asinan, Olongapo City 2200',
       'contact.contact': '연락처',
-      'contact.details': 'info@ksqph.com · support@ksqph.com · 0977.243.8333',
+      'contact.details': 'sales@ksqph.com · 0977.243.8333',
       'contact.office': '사무실',
       'contact.office.address': '필리핀 수빅베이 자유무역지대 C.B.D 지역 리잘 하이웨이 타임스퀘어 빌딩 리테일 #31, Lot 5',
       'contact.confirm': '문의해 주셔서 감사합니다. 곧 회신드리겠습니다.',
